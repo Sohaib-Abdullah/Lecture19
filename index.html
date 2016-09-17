@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app='ShoppingListApp'>
+<meta charset="utf-8">
+<head>
+   <title>Filter Array Example</title>
+   <script src="angular.min.js"></script>
+   <script src="app.js"></script>
+   <script src="filter.js"></script>
+   <style> body{font-size: 1.2em;
+   }</style>
+</head>
+<body>
+  <h1>Filter Array Example</h1>
+  <div ng-controller='ShoppingListController'>
+
+    <h3>Shopping List: </h3>
+ <input type="text" ng-model="search">
+    <ul>
+   <li ng-repeat="item in shoppingList1 | filter : search">{{item}}</li>
+ </ul>
+ </div>
+</body>
+</html>
